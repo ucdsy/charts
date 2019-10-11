@@ -17,8 +17,8 @@
   <body>
     <script type="text/javascript">
 
-    var w = 700,                        //width
-    h = 700,                            //height
+    var w = 1000,                        //width
+    h = 1000,                            //height
     r = 300,                            //radius
     color = d3.scale.category20c();     //builtin range of colors
 
@@ -70,6 +70,12 @@
             })
             .attr("text-anchor", "middle")                          //center the text on it's origin
             .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+        arcs.append("text")
+        .attr("x", (w / 2))
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("text-decoration", "underline")
+        .text("fulltime_men_applied vs year");
         
     </script>
   </body>
